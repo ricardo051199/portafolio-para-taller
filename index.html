@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body.dark {
+            background-color: #346751;
+            color: #ffffff;
+        }
+
+        body.light {
+            background-color: #B6F7C1;
+            color: #000000;
+        }
+
+        .navbar, footer {
+            background-color: #02383C;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .py-5 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .bg-light {
+            background-color: #80AC7B    !important;
+        }
+
+        .bg-dark {
+            background-color: #000000    !important;
+        }
+
+        h2 {
+            color: #ffc107;
+        }
+
+        h3 {
+            color: #17a2b8;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+        }
+
+        .portfolio-item,
+        .service-item {
+            background-color: #343a40;
+            padding: 2rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+
+        .btn-primary:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+        }
+
+        footer {
+            background-color: #02383C;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="light">
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Portafolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Acerca de Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Resumen de Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+                <button class="btn btn-link btn-toggle-theme" onclick="toggleTheme()">Cambiar Tema</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Acerca de Mí -->
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h2>Acerca de Mí</h2>
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <h3>J. Ricardo Peláez Sarabia</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor ipsum ac justo pretium, eu facilisis arcu convallis. Fusce aliquam urna in nulla scelerisque, a vulputate turpis congue. Vivamus vel libero non enim faucibus auctor et ac libero. Nullam eget tortor nulla. Cras posuere velit nec metus egestas vehicula.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="assets/me.webp" alt="Foto de Franz Beltrán" class="img-fluid rounded-circle" style="width: 250px; height: 200px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/habilidad1.webp" alt="Habilidad 1" class="img-fluid" style="max-width: 150px;">
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <h3>CSS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu augue a arcu euismod ultrices.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/habilidad2.webp" alt="Habilidad 2" class="img-fluid" style="max-width: 150px;">
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <h3>HTML</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu augue a arcu euismod ultrices.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/habilidad3.webp" alt="Habilidad 3" class="img-fluid" style="max-width: 150px;">
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <h3>JavaScript</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu augue a arcu euismod ultrices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portfolio" class="py-5 text-center">
+        <div class="container">
+            <h2>Portafolio</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/portafolio1.webp" alt="Proyecto 1" class="img-fluid">
+                        <h4>Título del Proyecto 1</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">VER</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/portafolio2.webp" alt="Proyecto 2" class="img-fluid">
+                        <h4>Título del Proyecto 2</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">VER</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="portfolio-item">
+                        <img src="assets/portafolio3.webp" alt="Proyecto 3" class="img-fluid" style="max-height: 165px;">
+                        <h4>Título del Proyecto 3</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">VER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="services" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <img src="assets/servicio1.webp" alt="Servicio 1" class="img-fluid">
+                        <h4>Servicio 1</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalService1">VER</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <img src="assets/servicio1.webp" alt="Servicio 2" class="img-fluid">
+                        <h4>Servicio 2</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalService2">VER</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <img src="assets/servicio1.webp" alt="Servicio 3" class="img-fluid">
+                        <h4>Servicio 3</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalService3">VER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contacto</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales -->
+    <div class="modal fade" id="modal1">
+        <div class="modal-dialog modal-lg">
+            <!-- Contenido del modal para el Proyecto 1 -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2">
+        <div class="modal-dialog modal-lg">
+            <!-- Contenido del modal para el Proyecto 2 -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3">
+        <div class="modal-dialog modal-lg">
+            <!-- Contenido del modal para el Proyecto 3 -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalService1">
+        <div class="modal-dialog modal-lg">
+            <!-- Contenido del modal para el Servicio 1 -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalService2">
+        <div class="modal-dialog modal-lg">
+            <!-- Contenido del modal para el Servicio 2 -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalService3">
+        <div class="modal-dialog modal-lg">
+            <!-- Contenido del modal para el Servicio 3 -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white py-4 text-center">
+        <div class="container">
+            <p>Derechos de Autor &copy; 2023 Peláez Sarabia J. Ricardo - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark");
+            body.classList.toggle("light");
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
